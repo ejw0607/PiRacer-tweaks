@@ -43,6 +43,7 @@ def run(self, throttle):
         #self.controller.pwm.set_pwm(self.controller.channel,0,pulse)**
         #self.controller.pwm.set_pwm(self.controller.channel,0,self.zero_pulse)**
         #self.controller.pwm.set_pwm(self.controller.channel,0,pulse)**
+         '''
          self.controller.pwm.set_pwm(self.controller.channel,0,- pulse)
          self.controller.pwm.set_pwm(self.controller.channel+2,0,0)
          self.controller.pwm.set_pwm(self.controller.channel+1,0,4095)
@@ -51,6 +52,7 @@ def run(self, throttle):
          self.controller.pwm.set_pwm(self.controller.channel+7,0,- pulse)
          self.controller.pwm.set_pwm(self.controller.channel+5,0,0)
          self.controller.pwm.set_pwm(self.controller.channel+6,0,4095)
+         '''
 
 def shutdown(self):
     self.run(0) #stop vehicle
