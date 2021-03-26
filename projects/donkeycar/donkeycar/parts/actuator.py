@@ -39,12 +39,13 @@ def run(self, throttle):
         pulse = dk.utils.map_range(throttle,
                                 self.MIN_THROTTLE, 0, 
                                 self.min_pulse, self.zero_pulse)
-        #added in these 4, uncommented.
-        #self.controller.pwm.set_pwm(self.controller.channel,0,self.zero_pulse)
-        #self.controller.pwm.set_pwm(self.controller.channel,0,pulse)
-        #self.controller.pwm.set_pwm(self.controller.channel,0,self.zero_pulse)
-        #self.controller.pwm.set_pwm(self.controller.channel,0,pulse)
-         
+         '''
+         added in these 4 below, uncommented.
+         self.controller.pwm.set_pwm(self.controller.channel,0,self.zero_pulse)
+         self.controller.pwm.set_pwm(self.controller.channel,0,pulse)
+         self.controller.pwm.set_pwm(self.controller.channel,0,self.zero_pulse)
+         self.controller.pwm.set_pwm(self.controller.channel,0,pulse)
+         '''
          self.controller.pwm.set_pwm(self.controller.channel,0,- pulse)
          self.controller.pwm.set_pwm(self.controller.channel+2,0,0)
          self.controller.pwm.set_pwm(self.controller.channel+1,0,4095)
